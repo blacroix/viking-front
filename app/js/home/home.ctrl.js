@@ -47,7 +47,7 @@ angular.module('viking.ctrl')
             if ($scope.keywords0.length > 0) {
                 keywords0ClientId = new Date().getTime();
                 var message = {
-                    keywords: $scope.keywords0.split(' '),
+                    keywords: $scope.keywords0,
                     clientId: keywords0ClientId
                 };
                 $socket.emit('front-request', message);
@@ -61,7 +61,7 @@ angular.module('viking.ctrl')
             if ($scope.keywords1.length > 0) {
                 keywords1ClientId = new Date().getTime();
                 var message = {
-                    keywords: $scope.keywords1.split(' '),
+                    keywords: $scope.keywords1,
                     clientId: keywords1ClientId
                 };
                 $socket.emit('front-request', message);
@@ -74,7 +74,7 @@ angular.module('viking.ctrl')
         $scope.stats0ChartConfig = {
             options: {
                 chart: {
-                    backgroundColor: '#8e44ad',
+                    backgroundColor: 'white',
                     plotBackgroundColor: null,
                     plotBorderWidth: null,
                     plotShadow: false
@@ -85,7 +85,7 @@ angular.module('viking.ctrl')
                 legend: {
                     itemStyle: {
                         font: '1em Roboto, sans-serif',
-                        color: 'white'
+                        color: '#2b2b2b'
                     }
                 },
                 plotOptions: {
@@ -97,6 +97,16 @@ angular.module('viking.ctrl')
                             enabled: false
                         },
                         showInLegend: true
+                    },
+                    series: {
+                        dataLabels: {
+                            enabled: true,
+                            formatter: function () {
+                                return Math.round(this.percentage * 100) / 100 + ' %';
+                            },
+                            distance: -30,
+                            color: 'white'
+                        }
                     }
                 }
             },
@@ -115,7 +125,7 @@ angular.module('viking.ctrl')
         $scope.stats1ChartConfig = {
             options: {
                 chart: {
-                    backgroundColor: '#8e44ad',
+                    backgroundColor: 'white',
                     plotBackgroundColor: null,
                     plotBorderWidth: null,
                     plotShadow: false
@@ -126,7 +136,7 @@ angular.module('viking.ctrl')
                 legend: {
                     itemStyle: {
                         font: '1em Roboto, sans-serif',
-                        color: 'white'
+                        color: '#2b2b2b'
                     }
                 },
                 plotOptions: {
@@ -136,6 +146,16 @@ angular.module('viking.ctrl')
                             enabled: false
                         },
                         showInLegend: true
+                    }
+                },
+                series: {
+                    dataLabels: {
+                        enabled: true,
+                        formatter: function () {
+                            return Math.round(this.percentage * 100) / 100 + ' %';
+                        },
+                        distance: -30,
+                        color: 'white'
                     }
                 }
             },
