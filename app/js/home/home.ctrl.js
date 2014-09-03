@@ -47,7 +47,7 @@ angular.module('viking.ctrl')
             if ($scope.keywords0.length > 0) {
                 keywords0ClientId = new Date().getTime();
                 var message = {
-                    keywords: $scope.keywords0,
+                    keywords: [$scope.keywords0],
                     clientId: keywords0ClientId
                 };
                 $socket.emit('front-request', message);
@@ -61,7 +61,7 @@ angular.module('viking.ctrl')
             if ($scope.keywords1.length > 0) {
                 keywords1ClientId = new Date().getTime();
                 var message = {
-                    keywords: $scope.keywords1,
+                    keywords: [$scope.keywords1],
                     clientId: keywords1ClientId
                 };
                 $socket.emit('front-request', message);
