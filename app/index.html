@@ -3,12 +3,23 @@
 <head>
     <meta charset="utf-8">
     <title>Viking</title>
-    <link href='http://fonts.googleapis.com/css?family=Roboto:400,500,700,300' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Paytone+One|Roboto:400,300,500,700' rel='stylesheet'
+          type='text/css'>
+    <link href="../bower_components/angular-material/angular-material.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="style/app.css">
 </head>
-<body>
+<body layout="vertical">
+<div class="app-name">Viking</div>
 <div ng-view></div>
+<script src="../bower_components/jquery/dist/jquery.min.js"></script>
+<script src="http://ec2-54-186-153-191.us-west-2.compute.amazonaws.com:3000/javascripts/socket.io.js"></script>
+<script src="../bower_components/highcharts/highcharts.js"></script>
 <script src="../bower_components/angular/angular.min.js"></script>
 <script src="../bower_components/angular-route/angular-route.min.js"></script>
+<script src="../bower_components/angular-animate/angular-animate.min.js"></script>
+<script src="../bower_components/angular-material/angular-material.min.js"></script>
+<script src="../bower_components/angular-socket-io/socket.min.js"></script>
+<script src="../bower_components/highcharts-ng/dist/highcharts-ng.min.js"></script>
 <script src="js/viking.js"></script>
 <script src="js/home/home.ctrl.js"></script>
 </body>

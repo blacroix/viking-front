@@ -10,6 +10,6 @@
   "scripts": {
     "postinstall": "bower install",
     "prestart": "npm install",
-    "start": "http-server -a 127.0.0.1 -p 6969 -c-1"
+    "start": "http-server -a 0.0.0.0 -p 6969 -c-1"
   }
 }

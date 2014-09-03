@@ -1,1 +1,52 @@
-<div>Hello {{name}}</div>
+<section class="home-header">
+    <div class="loading" ng-show="loading"></div>
+    <div class="keywords-input">
+        <material-input-group class="">
+            <label for="keyword0">Keyword</label>
+            <material-input id="keyword0" type="text" ng-model="keywords0"
+                            ng-blur="sendKeywords0()"></material-input>
+        </material-input-group>
+        <material-input-group class="">
+            <label for="keyword1">Keyword</label>
+            <material-input id="keyword1" type="text" ng-model="keywords1"
+                            ng-blur="sendKeywords1()"></material-input>
+        </material-input-group>
+        <material-button class="material-theme-light-blue">go</material-button>
+    </div>
+</section>
+<section class="home-body">
+    <div ng-if="stats0">
+        <material-toolbar class="material-theme-light">
+            <h1 class="material-toolbar-tools">
+                <span class="">Tweets count</span>
+            </h1>
+        </material-toolbar>
+        <div layout="vertical" layout-sm="horizontal" layout-padding>
+            <material-content class="material-content-padding" flex="50" offset="25">
+                <div class="tweet-count-body">
+                    <span>{{keywords0}}</span>
+
+                    <div class="tweet-count">{{stats0.positive+stats0.neutral+stats0.negative}}</div>
+                </div>
+                <div class="tweet-count-body" ng-if="stats1">
+                    <span>{{keywords1}}</span>
+
+                    <div class="tweet-count">{{stats1.positive+stats1.neutral+stats1.negative}}</div>
+                </div>
+            </material-content>
+        </div>
+        <material-toolbar class="material-theme-indigo">
+            <h1 class="material-toolbar-tools">
+                <span class="">General feeling</span>
+            </h1>
+        </material-toolbar>
+        <div layout="vertical" layout-sm="horizontal" layout-padding>
+            <material-content class="material-content-padding" flex="50" ng-attr-offset="{{stats1 ? 0 : 25}}">
+                <highchart id="stats0-chart" config="stats0ChartConfig"></highchart>
+            </material-content>
+            <material-content class="material-content-padding" flex="50" ng-if="stats1">
+                <highchart id="stats0-chart" config="stats1ChartConfig"></highchart>
+            </material-content>
+        </div>
+    </div>
+</section>
