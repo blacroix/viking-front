@@ -1,5 +1,7 @@
 # Viking web application
 
+````Made for Xebia's hackathon (XKE) on September 2014````
+
 ## HowTo
 
 ### Setup
