@@ -1,0 +1,9 @@
+{
+  "name": "viking-front",
+  "description": "Viking",
+  "version": "0.0.0",
+  "dependencies": {
+    "angular": "~1.2.23",
+    "angular-route": "~1.2.23"
+  }
+}

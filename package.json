@@ -1,0 +1,15 @@
+{
+  "name": "viking-front",
+  "version": "0.0.1",
+  "author": "blacroix",
+  "devDependencies": {
+    "bower": "^1.3.9",
+    "grunt": "^0.4.5",
+    "http-server": "^0.6.1"
+  },
+  "scripts": {
+    "postinstall": "bower install",
+    "prestart": "npm install",
+    "start": "http-server -a 127.0.0.1 -p 6969 -c-1"
+  }
+}
