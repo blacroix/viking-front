@@ -146,16 +146,16 @@ angular.module('viking.ctrl')
                             enabled: false
                         },
                         showInLegend: true
-                    }
-                },
-                series: {
-                    dataLabels: {
-                        enabled: true,
-                        formatter: function () {
-                            return Math.round(this.percentage * 100) / 100 + ' %';
-                        },
-                        distance: -30,
-                        color: 'white'
+                    },
+                    series: {
+                        dataLabels: {
+                            enabled: true,
+                            formatter: function () {
+                                return Math.round(this.percentage * 100) / 100 + ' %';
+                            },
+                            distance: -30,
+                            color: 'white'
+                        }
                     }
                 }
             },
