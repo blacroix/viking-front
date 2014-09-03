@@ -44,9 +44,11 @@
         </material-toolbar>
         <div layout="vertical" layout-sm="horizontal" layout-padding>
             <material-content class="material-content-padding" flex="50" ng-attr-offset="{{stats1 ? 0 : 25}}">
+                {{keyword0}}
                 <highchart id="stats0-chart" config="stats0ChartConfig"></highchart>
             </material-content>
             <material-content class="material-content-padding" flex="50" ng-if="stats1">
+                {{keyword1}}
                 <highchart id="stats0-chart" config="stats1ChartConfig"></highchart>
             </material-content>
         </div>
