@@ -51,9 +51,9 @@ angular.module('viking.ctrl')
                     clientId: keywords0ClientId
                 };
                 $socket.emit('front-request', message);
-            }
-            if (!$scope.loading) {
-                $scope.loading = true;
+                if (!$scope.loading) {
+                    $scope.loading = true;
+                }
             }
         };
 
@@ -65,9 +65,9 @@ angular.module('viking.ctrl')
                     clientId: keywords1ClientId
                 };
                 $socket.emit('front-request', message);
-            }
-            if (!$scope.loading) {
-                $scope.loading = true;
+                if (!$scope.loading) {
+                    $scope.loading = true;
+                }
             }
         };
 
